@@ -42,6 +42,7 @@
                       placeholder="Write here"
                       required
                       type="text"
+                      autocomplete="off"
                     />
                     <span class="popup__error" id="todo-name-error"></span>
                   </label>
@@ -54,6 +55,7 @@
                       type="date"
                       min="2023-01-01"
                       max="3000-12-31"
+                      autocomplete="off"
                     />
                     <span class="popup__error" id="todo-date-error"></span>
                   </label>
@@ -88,8 +90,7 @@
               </template>
             </ul>
           </section>
-          <script src="./pages/index.js" defer></script>
-          <script src="./scripts/validate.js" defer></script>
+          <script src="./pages/index.js" type="module"></script>
         </main>
       </div>
     </div>
