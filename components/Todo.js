@@ -5,12 +5,19 @@ class Todo {
   }
 
   _setEventListeners() {
-// set event 'change' listener on chechbox el
 this._todoCheckboxEl.addEventListener("change", () => {
 this._data.completed = !this._data.completed;
 console.log(this._data.completed);
-})
-// when clicked it should change completion status from true to false
+});
+
+ this._todoCheckboxEl.addEventListener("change", () => {
+    this._data.completed = this._todoCheckboxEl.checked;
+ });
+
+  this._todoDeleteBtn.addEventListener("click", () => {
+    this._todoElement.remove();
+  });
+}
   }
 
   _generateCheckboxEl() {
@@ -33,6 +40,15 @@ console.log(this._data.completed);
     const todoDeleteBtn = this._todoElement.querySelector(".todo__delete-btn");
 
     todoNameEl.textContent = this._data.name;
+
+    const dueDate = new Date(this._data.date);
+    if (!isNaN(dueDate)) {
+      this._todoDate.textContent = `Due: ${dueDate.toLocaleString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })}`;
+    }
     
     this._generateCheckboxEl();
     this._setEventListeners();
