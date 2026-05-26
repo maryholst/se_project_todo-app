@@ -1,14 +1,16 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+This app was created to help you keep track of your tasks for better productivity!
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+Users can add new tasks that appear in a list style for easy viewing. When a task is added, it can be checked "completed" and also deleted, if the user wishes to do so.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+The Simple Todo app was created using HTML, CSS and Javascript, OOP form validator and DOM manipulation.
+![project screenshot] (./images/demo/todo-app)
+![project screenshot] (./images/demo/todo-app-add)
 
 ## Deployment
 
