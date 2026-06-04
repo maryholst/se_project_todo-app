@@ -49,6 +49,9 @@ addTodoForm.addEventListener("submit", (evt) => {
   const todo = generateTodo(values);
   todosList.append(todo);
   closeModal(addTodoPopup);
+
+  addTodoForm.reset();                        
+  addTodoFormValidator.resetValidation(); 
 });
 
 const renderTodo = (item) => {
