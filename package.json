@@ -1,0 +1,20 @@
+{
+  "name": "se_project_todo-app",
+  "version": "1.0.0",
+  "description": "This app was created to help you keep track of your tasks for better productivity!",
+  "homepage": "https://github.com/maryholst/se_project_todo-app#readme",
+  "bugs": {
+    "url": "https://github.com/maryholst/se_project_todo-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maryholst/se_project_todo-app.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

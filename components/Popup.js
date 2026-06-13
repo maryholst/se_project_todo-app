@@ -20,45 +20,13 @@ export class Popup {
   };
 
   setEventListeners() {
-    const closeButton = this._popup.querySelector(".popup__close");
-
-    closeButton.addEventListener("click", () => {
-      this.close();
-    });
-
-    this._popup.addEventListener("mousedown", (evt) => {
-      if (evt.target === this._popup) {
+    this._popup.addEventListener("mousedown", (event) => {
+      if (
+        event.target === this._popup ||
+        event.target.classList.contains("popup__close")
+      ) {
         this.close();
       }
-    });
-  }
-}
-
-export class PopupWithForm extends Popup {
-  constructor(popup, handleFormSubmit) {
-    super(popup);
-    this._handleFormSubmit = handleFormSubmit;
-    this._form = this._popup.querySelector(".popup__form");
-  }
-
-  _getInputValues() {
-    const inputs = this._form.querySelectorAll(".popup__input");
-    const values = {};
-
-    inputs.forEach((input) => {
-      values[input.name] = input.value;
-    });
-
-    return values;
-  }
-
-  setEventListeners() {
-    super.setEventListeners();
-
-    this._form.addEventListener("submit", (evt) => {
-      evt.preventDefault();
-      this._handleFormSubmit(this._getInputValues());
-      this.close();
     });
   }
 }
